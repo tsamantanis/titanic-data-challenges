@@ -1,4 +1,4 @@
-# FEW 2,5 Tutorial 2 Loading Data 
+# FEW 2.5 Tutorial 2 Loading Data 
 
 Data needs to come from somewhere and usually there is a lot of it. For this example you will use data from the Titanic in JSON format. 
 
