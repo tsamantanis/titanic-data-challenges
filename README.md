@@ -1,8 +1,8 @@
 # FEW 2.5 Tutorial 2 Loading Data 
 
-Data needs to come from somewhere and usually there is a lot of it. For this example you will use data from the Titanic in JSON format. 
+Data needs to come from somewhere and usually, there is a lot of it. For this example, you will use data from the Titanic in JSON format. 
 
-Often you'll want to convert data from it's raw form into things that make it easier to understand. For example the Titanic dataset is a list of objects that contain for each passenger.
+Often you'll want to convert data from its raw form into things that make it easier to understand. For example, the Titanic dataset is a list of objects that contain for each passenger.
 
 Your goal in this tutorial is to load the Titanic dataset and extract useful information from it. 
 
@@ -18,43 +18,43 @@ Your goal in this tutorial is to load the Titanic dataset and extract useful inf
 
 Your goal is to load the Titanic JSON dataset and write code that examines the data for the values below. 
 
-**Why solve these problems?** Think of each of the problems below as tiny technical interview. Seriously answering any of the questions below could be a piece of many technical interview qestions. Mastering these here is a good way to prep for similar questions you might run into in the future. 
+**Why solve these problems?** Think of each of the problems below as tiny technical interview. Seriously answering any of the questions below could be a piece of many technical interview questions. Mastering these here is a good way to prep for similar questions you might run into in the future. 
 
 Also, if you have an interest in data science being able to find values relevant values from a dataset is important and a required step for almost every process. 
 
 - [**Number of passengers**](#number-of-passengers)
-	- Number of passengers - Number
+    - Number of passengers - Number
 - [**Count the men and women**](#count-the-men-and-women)
-	- Number of male passenger - Number
-	- Number of female passengers - Number
+    - Number of male passengers - Number
+    - Number of female passengers - Number
 - [**Count all Values of a field**](#count-all-Values-of-a-field)
-	- Number of passenger classes - Array of classes [1,2,3]
-	- Number of siblings/spouses - Array of Numbers [0, 1, 2, 3, ...]
-	- Number of different fares paidList of cabins - Array of Strings ["F4", "F3", "f43", ...]
+    - Number of passenger classes - Array of classes [1,2,3]
+    - Number of siblings/spouses - Array of Numbers [0, 1, 2, 3, ...]
+    - Number of different fares paidList of cabins - Array of Strings ["F4", "F3", "f43", ...]
 - [**Agregate data**](#agregate-data) 
   - Total of all fares
-- [**Filter for male or female passengers**](#filter-for-male-or-female passengers)
-	- Make a list of all passengers who survived - Array of passengers
-	- Make a list of all passengers who did not survive - Array of Passengers 
-	- Find all of the female passengers that survived - Array of Passengers 
-	- Find all of the female passengers who did not survive - Array of Passengers 
-	- Find all of the male passengers who survived - Array of Passengers 
-	- Find all of the male passengers who did not survive - Array of Passengers 
-	- Make a list all passenger classes - Array of Passengers  
-	- Make a list of women and men in each class - Array of Passengers 
+- [**Filter for male or female passengers**](#filter-for-male-or-female-passengers)
+    - Make a list of all passengers who survived - Array of passengers
+    - Make a list of all passengers who did not survive - Array of Passengers 
+    - Find all of the female passengers that survived - Array of Passengers 
+    - Find all of the female passengers who did not survive - Array of Passengers 
+    - Find all of the male passengers who survived - Array of Passengers 
+    - Find all of the male passengers who did not survive - Array of Passengers 
+    - Make a list of all passenger classes - Array of Passengers  
+    - Make a list of women and men in each class - Array of Passengers 
 - [**Find a min and a max**](#find-a-min-and-a-max)
-	- Find the maximum fare paid - Number
-	- Find the minimum fare paid - Number
-	- Find the Oldest and youngest passenger - Number
-	- Find the oldest male and femal passenger - Number
-	- Find the youngest male and female passenger - Number
-	- Find the oldest survivor - Number
-	- Find the youngest survivor - Number
+    - Find the maximum fare paid - Number
+    - Find the minimum fare paid - Number
+    - Find the Oldest and youngest passenger - Number
+    - Find the oldest male and female passenger - Number
+    - Find the youngest male and female passenger - Number
+    - Find the oldest survivor - Number
+    - Find the youngest survivor - Number
 - [**Find an average**](#find-an-average)
-	- Find the average age of all passengers - Number
-	- Find the average age of all female passengers - Number
-	- Find the average age of all male passengers - Number
-	- Find the average fare paid for all passengers - Number
+    - Find the average age of all passengers - Number
+    - Find the average age of all female passengers - Number
+    - Find the average age of all male passengers - Number
+    - Find the average fare paid for all passengers - Number
 
 ## Getting started 
 
@@ -74,7 +74,7 @@ The second element defines a script tag where you will write your JS code.
 
 ## Loading JSON with `fetch()`
 
-An easy and simple way to load data is to use the browser's built in `fetch()` API. 
+An easy and simple way to load data is to use the browser's built-in `fetch()` API. 
 
 Add the following to the script tag: 
 
@@ -87,13 +87,13 @@ Add the following to the script tag:
 </script>
 ```
 
-Open this file in a web browser. Nothing happens, check the console. There should an an error soemthing like this: 
+Open this file in a web browser. Nothing happens, check the console. There should an error something like this: 
 
 `Cross origin requests are only supported for HTTP.`
 
 This is a [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) error. CORS is a security feature that sets policies about which files can be opened determined by where those files are served from. 
 
-In this case you are serving 'titanic-passengers.json' from 
+In this case, you are serving 'titanic-passengers.json' from 
 
 `file:///Users/username/Documents/titanic-passengers.json`
 
@@ -103,7 +103,7 @@ Why? This would be a huge security hole if any JavaScript code could open and re
 
 ## Local Server 
 
-In order to load files from the desktop you'll need to start a local server. There are many ways to do this.
+In order to load files from the desktop, you'll need to start a local server. There are many ways to do this.
 
 - Local server option or plugin in your editor
 - Use an application like WAMP or MAMP
@@ -150,9 +150,9 @@ If you have nodemon installed.
 
 Move your HTML file and the titanic data into the public folder. 
 
-After running the server you should be able to visit: [http://localhost:4000](http://localhost:4000) to see your html document. 
+After running the server you should be able to visit: [http://localhost:4000](http://localhost:4000) to see your HTML document. 
 
-The page will still be blank but checking the console the error should be gone and the JSON should displayed. 
+The page will still be blank but checking the console the error should be gone and the JSON should be displayed. 
 
 ## Combing through JSON
 
@@ -180,7 +180,7 @@ The data from the Titanic dataset is stored as an array of objects. Each object 
 }
 ```
 
-At the top level there are four fields
+At the top level, there are four fields
 
 - datasetid
 - recordid
@@ -224,7 +224,7 @@ Modify the script you have to look like this:
 </script>
 ```
 
-Here you added a function to handle the data after it is loaded, and called the function passing the json data to it. 
+Here you added a function to handle the data after it is loaded and called the function passing the JSON data to it. 
 
 ## Examining the data for relevant values 
 
@@ -256,7 +256,7 @@ const womenCount = data.reduce((acc, passenger) => {
 console.log(`Women count: ${womenCount}`)
 ```
 
-Add the script above to `handleData()`. It should print the number of female passengers on the titanic. 
+Add the script above to `handleData()`. It should print the number of female passengers on the Titanic. 
 
 Challenge: Count the number of male passengers. 
 
@@ -304,11 +304,11 @@ This solution works for the Titanic dataset. Since the data fields are not at th
 
 ### Count all Values of a field
 
-The goal here is look through the passengers and find how many different values there are for a field. For example if we looked at all of the passengers and wanted to know how many genders there were you would get two" "male" and "female". 
+The goal here is to look through the passengers and find how many different values there are for a field. For example, if we looked at all of the passengers and wanted to know how many genders there were you would get two" "male" and "female". 
 
-This might not be useful for age but it might be useful for things like the pclass, you can ask how many different passenger classes were there? It might also be good for emabrkation, how many stops did the Titanic make? 
+This might not be useful for age but it might be useful for things like the pclass, you can ask how many different passenger classes were there? It might also be good for embarkation, how many stops did the Titanic make? 
 
-You can find these values as a step to finding things like the number of passengers in a passenger class, or how many passengers got on the Titanic at a particular embarkation. 
+You can find these values as a step to finding things like the number of passengers in a passenger class, or how many passengers got on the Titanic at particular embarkation. 
 
 There are a couple ways to handle this. Use `Array.reduce()` to create an array or object with unique values: 
 
@@ -327,7 +327,7 @@ const allClasses = data.reduce((acc, passenger) => {
 }, [])
 ```
 
-Here the accumulator is an array. For each item in `data` use `Array.indexOf()` to find it in the Accumulator. If indexOf returns -1 the item doesn't exist in which case we add the value to the array. Otherwise return the accumulator unchanged. 
+Here the accumulator is an array. For each item in `data` use `Array.indexOf()` to find it in the Accumulator. If indexOf returns -1 the item doesn't exist in which case we add the value to the array. Otherwise, return the accumulator unchanged. 
 
 Challenges: 
 
@@ -338,7 +338,7 @@ Challenges:
 
 ### Agregate data 
 
-Sometimes you'll want to know the total value of all the things. For example it might be important to know how much was spent on all fares. Or count the number of passengers in each class. 
+Sometimes you'll want to know the total value of all the things. For example, it might be important to know how much was spent on all fares. Or count the number of passengers in each class. 
 
 ```JavaScript
 const totalFares = data.reduce((acc, passenger) => {
@@ -346,8 +346,6 @@ const totalFares = data.reduce((acc, passenger) => {
 }, 0)
 console.log(totalFares)
 ```
-
-
 
 ### Filter for male or female passengers
 
@@ -371,12 +369,12 @@ Further Challenges:
 - Find all of the female passengers who did not survive
 - Find all of the male passengers who survived
 - Find all of the male passengers who did not survive
-- Make a list all passenger classes
+- Make a list of all passenger classes
   - Make a list of women and men in each class
 
 ### Find a min and a max 
 
-Sometimes you'll want to know the minimum or max value of a field. For example you might want to know the min and max age of all passengers. 
+Sometimes you'll want to know the minimum or max value of a field. For example, you might want to know the min and max age of all passengers. 
 
 There are a few ways you can work with `Math.min()` and `Math.max()`. Since we used `Array reduce()` above I'll use it again here. 
 
@@ -395,14 +393,14 @@ console.log(`Youngest female: ${femaleMinAge} Oldest female: ${femaleMaxAge}`)
 
 Notice that using the initial value is required since `passenger` is an object. 
 
-Some of the passengers do not have a listed age. My sample code needed to check for this to revent errors. If `passenger.fields.age` is false the reducers callback returns the current value. Otherwise it is compared to the new value. 
+Some of the passengers do not have a listed age. My sample code needed to check for this to prevent errors. If `passenger.fields.age` is false the reducers callback returns the current value. Otherwise, it is compared to the new value. 
 
 Note! JS considers `undefined` and  `null` to be false. If the age field doesn't exist `passenger.field.age` should be `undefined`. For more in this subject look up: 
 
 - [JS Truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
 - [JS Falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
 
-Also notice that I used the femalePassengers and malePassengers array to get these values. 
+Also, notice that I used the femalePassengers and malePassengers array to get these values. 
 
 Challenge: 
 
@@ -427,7 +425,7 @@ console.log(`Minimum fare: ${minFare} Max Fare: ${maxFare}`)
 - Find the maximum fare paid
 - Find the minimum fare paid
 - Find the Oldest and youngest passenger
-- Find the oldest male and femal passenger
+- Find the oldest male and female passenger
 - Find the youngest male and female passenger
 - Find the oldest survivor
 - Find the youngest survivor
@@ -500,7 +498,7 @@ function makeValueElement(value, label) {
 }
 ```
 
-This function returns an element, you'll need to appeand it to an element in the DOM in order to see it. 
+This function returns an element, you'll need to append it to an element in the DOM in order to see it. 
 
 ```JavaScript  
 const passengerCount = makeValueElement(data.length, "Number of Passengers")
@@ -516,7 +514,7 @@ const femalePassengerCount = makeValueElement(data.length, "Number of Female Pas
 container.appendChil(femalePassengerCount)
 ```
 
-Using this approach allows you to easily edit your work to imporve the display. Imagine you want the numbers to be bold and labels to display normal weight. You can do this by editing the `makeValueElement()` function. 
+Using this approach allows you to easily edit your work to improve the display. Imagine you want the numbers to be bold and labels to display normal weight. You can do this by editing the `makeValueElement()` function. 
 
 ```JavaScript 
 function makeValueElement(value, label) {
