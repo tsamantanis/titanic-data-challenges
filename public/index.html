@@ -1,6 +1,50 @@
 <div id="data-display"></div>
 <div id="container"></div>
 
+
+<div id="data-display"></div>
+<div id="container"></div>
+
+<script>
+  // Load the titanic data. You must run this from a server.
+  // It won't load from the desktop because of CORS.
+  fetch('titanic-passengers.json')
+    .then(res => res.json())
+    .then(json => handleData(json)) // Call handleData()
+    .catch(err => console.log(err.message))
+
+  // This function handles to the JSON data loaded
+  function handleData(data) {
+    
+
+    const maleCount = data.reduce((acc, person) => {
+      if (person.fields.sex === "male") {
+        acc += 1
+      }
+      return acc
+    }, 0)
+
+    const femaleCount = data.reduce((acc, person) => {
+      if (person.fields.sex === "female") {
+        acc += 1
+      }
+      return acc
+    }, 0)
+    
+    const unknownCount = data.reduce((acc, person) => {
+      if (person.fields.sex !== "male" && person.fields.sex !== "female") {
+        acc += 1
+      }
+      return acc
+    }, 0)
+    console.log("Number of males: ", maleCount)
+    console.log("Number of females: ", femaleCount)
+    console.log("Number of unknowns: ", unknownCount)
+  }
+
+</script>
+
+
 <script>
   // Load the titanic data. You must run this from a server. 
   // It won't load from the desktop becuase of CORS.

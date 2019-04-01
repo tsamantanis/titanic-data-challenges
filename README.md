@@ -480,7 +480,7 @@ passengerCount.innerHTML = data.length // This is the number of passengers
 passengerCount.style.fontSize = '24px'
 passengerCount.style.fontWeight = 'bold'
 // 4. Append element to DOM
-container.appendChil(passengerCount)
+container.appendChild(passengerCount)
 ```
 
 You can repeat the process for your other elements. But, this is not DRY. To improve on your process make a function. 
@@ -502,7 +502,7 @@ This function returns an element, you'll need to append it to an element in the 
 
 ```JavaScript  
 const passengerCount = makeValueElement(data.length, "Number of Passengers")
-container.appendChil(passengerCount)
+container.appendChild(passengerCount)
 ```
 
 You can now easily repeat this for other values
@@ -511,7 +511,7 @@ You can now easily repeat this for other values
 const malePassengerCount = makeValueElement(data.length, "Number of Male Passengers")
 container.appendChil(malePassengerCount)
 const femalePassengerCount = makeValueElement(data.length, "Number of Female Passengers")
-container.appendChil(femalePassengerCount)
+container.appendChild(femalePassengerCount)
 ```
 
 Using this approach allows you to easily edit your work to improve the display. Imagine you want the numbers to be bold and labels to display normal weight. You can do this by editing the `makeValueElement()` function. 
