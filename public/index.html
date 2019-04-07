@@ -1,10 +1,6 @@
 <div id="data-display"></div>
 <div id="container"></div>
 
-
-<div id="data-display"></div>
-<div id="container"></div>
-
 <script>
   // Load the titanic data. You must run this from a server.
   // It won't load from the desktop because of CORS.
@@ -15,7 +11,7 @@
 
   // This function handles to the JSON data loaded
   function handleData(data) {
-    
+
 
     const maleCount = data.reduce((acc, person) => {
       if (person.fields.sex === "male") {
@@ -207,6 +203,20 @@
       return acc
     }, 0)
   }
+
+
+const newEl = document.createElement('div')
+document.getElementById('container').appendChild(newEl)
+const label = document.createElement('p')
+newEl.appendChild(label)
+
+label.style.fontSize = '24px'
+
+newEl.style.width = '100px'
+newEl.style.height = '100px'
+// background-color -> backgroundColor
+newEl.style.backgroundColor = 'red'
+
 
   
 </script>
