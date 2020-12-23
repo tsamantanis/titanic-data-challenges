@@ -1,10 +1,230 @@
-const express = require('express');
+// ================================================================
 
-const app = express();
-app.use(express.static('public'));
+// Titanic Dataset challenges! 
 
-const PORT = process.env.PORT = 4000;
+// Your goal is to write some functions that will extract
+// relevant data from the dataset. 
 
-app.listen(PORT, () => {
-  console.log('Server is running at:', PORT);
-});
+// Write your code here in this file. 
+
+// *************************************
+// Test your code by running: `npm test`
+// *************************************
+
+// Each of the functions below expects to receive the Titanic data
+// as the parameter data. Your goal is to extract the relevant 
+// piece of information from the data and return it. 
+
+// ===============================================================
+
+// ---------------------------------------------------------------
+// Return the total number of passengers
+
+function getTotalPassengers(data) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of surviving passengers
+
+function getSurvivorCount(data) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of passengers who did not survive
+
+function getCasualityCount(data) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of passengers in any class. This function 
+// takes the data and the passenger class and returns the number
+// of passengers in that class. 
+
+function countPassengersInClass(data, pclass) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of survivors in a class. This function takes 
+// the data and passenger class and returns the number of 
+// passengers in that class who survived. 
+
+function getSurvivorCountForClass(data, pclass) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of passengers who did not survive in a class.
+// This function takes the data and the passenger class and returns 
+// the number of passengers who did not survive for that class. 
+
+function getCasualityCountForClass(data, pclass) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the age of the youngest passenger. You'll need to filter
+// passenger data where the age is missing. 
+
+function getMinAge(data) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the age of the oldest passenger. 
+
+function getMaxAge(data) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of passengers that embarked at a given stop. 
+// Each passenger has a embarked property with a value of: S, C,
+// or Q. 
+
+function getEmbarkedCount(data, embarked) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the lowest fair paid by any passenger. The fare is missing 
+// for some passengers you'll need to filter this out! 
+
+function getMinFare(data) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the highest fare paid by any passenger. Some of the 
+// passengers are missing data for fare.
+
+function getMaxFare(data) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the count of passengers by gender. 
+
+function getPassengersByGender(data, gender) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of passengers who survived by gender. 
+
+function getSurvivorsByGender(data, gender) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of passengers who did not survived by gender. 
+
+function getCasualitiesByGender(data, gender) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of passengers who survived by passenger class.
+
+function getSurvivorsByPClass(data, pclass) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return the number of passengers who survived by passenger class.
+
+function getCasualitiesByPClass(data, pclass) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Write a function that returns an array of unique values for any
+// property in the data. For example If we needed to find number 
+// of passenger classes from data this function should return:
+// [1,2,3]. If you wanted to find the number of embarkations the 
+// function should return: ['S', 'C', 'Q']
+
+function getUniqueValues(data, property) {
+	return 0
+}
+
+// ---------------------------------------------------------------
+// Return all of the objects in the data where a given field is 
+// not undefined. If a field is undefined it means that field is 
+// missing from the data. 
+
+function getAllOfField(data, field) {
+	return 0
+}
+
+// --------------------------------------------------------------
+// Return the total of all fares paid. 
+
+function getTotalFare(data) {
+	return 0
+}
+
+// --------------------------------------------------------------
+// Return the average fare paid.
+
+function getAverageFare(data) {
+	return 0
+}
+
+// --------------------------------------------------------------
+// Return the median fare. The median is the value equal distance
+// from the minimum and maximum values. 
+
+function getMedianFare(data) {
+	return 0
+}
+
+// --------------------------------------------------------------
+// Return the average age of all passengers. 
+
+function getAverageAge(data) {
+	return 0
+}
+
+// --------------------------------------------------------------
+// Return the median age from passengers. 
+
+function getMedianAge(data) {
+	return 0
+}
+
+// --------------------------------------------------------------
+// 
+
+function getAverageAgeByGender(data, gender) {
+	return 0
+}
+
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+module.exports.getTotalPassengers = getTotalPassengers
+module.exports.getSurvivorCount = getSurvivorCount
+module.exports.getCasualityCount = getCasualityCount
+module.exports.getUniqueValues = getUniqueValues
+module.exports.countPassengersInClass = countPassengersInClass
+module.exports.getSurvivorCountForClass = getSurvivorCountForClass
+module.exports.getCasualityCountForClass = getCasualityCountForClass
+module.exports.getMinAge = getMinAge
+module.exports.getMaxAge = getMaxAge
+module.exports.getEmbarkedCount = getEmbarkedCount
+module.exports.getMaxFare = getMaxFare
+module.exports.getMinFare = getMinFare
+module.exports.getPassengersByGender = getPassengersByGender
+module.exports.getSurvivorsByGender = getSurvivorsByGender
+module.exports.getCasualitiesByGender = getCasualitiesByGender
+module.exports.getSurvivorsByPClass = getSurvivorsByPClass
+module.exports.getCasualitiesByPClass = getCasualitiesByPClass
+module.exports.getTotalFare = getTotalFare
+module.exports.getAverageFare = getAverageFare
+module.exports.getMedianFare = getMedianFare
+module.exports.getAverageAge = getAverageAge
+module.exports.getMedianAge = getMedianAge
+module.exports.getAverageAgeByGender = getAverageAgeByGender
