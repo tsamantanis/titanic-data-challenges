@@ -15,7 +15,7 @@
 // as the parameter data. Your goal is to extract the relevant 
 // piece of information from the data and return it. 
 
-// ===============================================================
+// =================================================================
 
 // 1 ---------------------------------------------------------------
 // Return the total number of passengers

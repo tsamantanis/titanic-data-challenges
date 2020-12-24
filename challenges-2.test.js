@@ -126,3 +126,16 @@ test('Test makeHistogram', () => {
 	expect(index.makeHistogram(data, 'age', 5)).toEqual(Array.from(ages5, v => v || 0))
 	expect(index.makeHistogram(data, 'fare', 10)).toEqual(Array.from(fares, v => v || 0))
 })
+
+test('Test normalizeProperty', () => {
+	const ages = data.filter(p => p.fields.age !== undefined).map(p => p.fields.age)
+	const maxAge = Math.max(...ages)
+	const normalizedAges = ages.map(v => v / maxAge)
+
+	const fares = data.map(p => p.fields.fare)
+	const maxFare = Math.max(...fares)
+	const normalizedFares = fares.map(v => v / maxFare)
+	
+	expect(index.normalizeProperty(data, 'age')).toEqual(normalizedAges)
+	expect(index.normalizeProperty(data, 'fare')).toEqual(normalizedFares)
+})

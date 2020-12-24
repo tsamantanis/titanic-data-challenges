@@ -80,6 +80,14 @@ function makeHistogram(data, property, step) {
 	return []
 }
 
+// 7 ------------------------------------------------------------
+// normalizeProperty takes data and a property and returns an 
+// array of normalized values. To normalize the values you need
+// to divide each value by the maximum value in the array.
+
+function normalizeProperty(data, property) {
+	return []
+}
 
 // --------------------------------------------------------------
 // --------------------------------------------------------------
@@ -89,3 +97,4 @@ module.exports.filterNullForProperty = filterNullForProperty
 module.exports.sumAllProperty = sumAllProperty
 module.exports.countAllProperty = countAllProperty
 module.exports.makeHistogram = makeHistogram
+module.exports.normalizeProperty = normalizeProperty
