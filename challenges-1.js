@@ -17,28 +17,28 @@
 
 // ===============================================================
 
-// ---------------------------------------------------------------
+// 1 ---------------------------------------------------------------
 // Return the total number of passengers
 
 function getTotalPassengers(data) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 2 ---------------------------------------------------------------
 // Return the number of surviving passengers
 
 function getSurvivorCount(data) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 3 ---------------------------------------------------------------
 // Return the number of passengers who did not survive
 
 function getCasualityCount(data) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 4 ---------------------------------------------------------------
 // Return the number of passengers in any class. This function 
 // takes the data and the passenger class and returns the number
 // of passengers in that class. 
@@ -47,7 +47,7 @@ function countPassengersInClass(data, pclass) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 5 ---------------------------------------------------------------
 // Return the number of survivors in a class. This function takes 
 // the data and passenger class and returns the number of 
 // passengers in that class who survived. 
@@ -56,7 +56,7 @@ function getSurvivorCountForClass(data, pclass) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 6 ---------------------------------------------------------------
 // Return the number of passengers who did not survive in a class.
 // This function takes the data and the passenger class and returns 
 // the number of passengers who did not survive for that class. 
@@ -65,7 +65,7 @@ function getCasualityCountForClass(data, pclass) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 7 ---------------------------------------------------------------
 // Return the age of the youngest passenger. You'll need to filter
 // passenger data where the age is missing. 
 
@@ -73,14 +73,14 @@ function getMinAge(data) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 8 ---------------------------------------------------------------
 // Return the age of the oldest passenger. 
 
 function getMaxAge(data) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 9 ---------------------------------------------------------------
 // Return the number of passengers that embarked at a given stop. 
 // Each passenger has a embarked property with a value of: S, C,
 // or Q. 
@@ -89,7 +89,7 @@ function getEmbarkedCount(data, embarked) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 10 ---------------------------------------------------------------
 // Return the lowest fair paid by any passenger. The fare is missing 
 // for some passengers you'll need to filter this out! 
 
@@ -97,7 +97,7 @@ function getMinFare(data) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 11 ---------------------------------------------------------------
 // Return the highest fare paid by any passenger. Some of the 
 // passengers are missing data for fare.
 
@@ -105,42 +105,42 @@ function getMaxFare(data) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 12 ---------------------------------------------------------------
 // Return the count of passengers by gender. 
 
 function getPassengersByGender(data, gender) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 13 ---------------------------------------------------------------
 // Return the number of passengers who survived by gender. 
 
 function getSurvivorsByGender(data, gender) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 14 ---------------------------------------------------------------
 // Return the number of passengers who did not survived by gender. 
 
 function getCasualitiesByGender(data, gender) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 15 ---------------------------------------------------------------
 // Return the number of passengers who survived by passenger class.
 
 function getSurvivorsByPClass(data, pclass) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 16 ---------------------------------------------------------------
 // Return the number of passengers who survived by passenger class.
 
 function getCasualitiesByPClass(data, pclass) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 17 ---------------------------------------------------------------
 // Write a function that returns an array of unique values for any
 // property in the data. For example If we needed to find number 
 // of passenger classes from data this function should return:
@@ -151,7 +151,7 @@ function getUniqueValues(data, property) {
 	return 0
 }
 
-// ---------------------------------------------------------------
+// 18 ---------------------------------------------------------------
 // Return all of the objects in the data where a given field is 
 // not undefined. If a field is undefined it means that field is 
 // missing from the data. 
@@ -160,21 +160,21 @@ function getAllOfField(data, field) {
 	return 0
 }
 
-// --------------------------------------------------------------
+// 19 --------------------------------------------------------------
 // Return the total of all fares paid. 
 
 function getTotalFare(data) {
 	return 0
 }
 
-// --------------------------------------------------------------
+// 20 --------------------------------------------------------------
 // Return the average fare paid.
 
 function getAverageFare(data) {
 	return 0
 }
 
-// --------------------------------------------------------------
+// 21 --------------------------------------------------------------
 // Return the median fare. The median is the value equal distance
 // from the minimum and maximum values. 
 
@@ -182,21 +182,21 @@ function getMedianFare(data) {
 	return 0
 }
 
-// --------------------------------------------------------------
+// 22 --------------------------------------------------------------
 // Return the average age of all passengers. 
 
 function getAverageAge(data) {
 	return 0
 }
 
-// --------------------------------------------------------------
+// 23 --------------------------------------------------------------
 // Return the median age from passengers. 
 
 function getMedianAge(data) {
 	return 0
 }
 
-// --------------------------------------------------------------
+// 24 --------------------------------------------------------------
 // 
 
 function getAverageAgeByGender(data, gender) {

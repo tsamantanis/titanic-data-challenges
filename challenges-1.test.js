@@ -1,4 +1,4 @@
-const index = require('./index.js')
+const index = require('./challenges-1.js')
 
 const fs = require('fs');
 

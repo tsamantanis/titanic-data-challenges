@@ -1,7 +1,5 @@
 # FEW 2.5 Working with Data
 
-
-
 ## Objectives 
 
 - Identify values in a dataset
