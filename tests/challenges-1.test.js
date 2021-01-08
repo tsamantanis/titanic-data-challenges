@@ -1,4 +1,4 @@
-const index = require('./challenges-1.js')
+const index = require('../challenges-1.js')
 const fs = require('fs');
 
 const json_data = './titanic-passengers.json'
