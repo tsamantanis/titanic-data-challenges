@@ -18,21 +18,25 @@
 // =================================================================
 
 // 1 ---------------------------------------------------------------
-// Return the total number of passengers
+// Return the total number of passengers. 
+// Return a number.
 
 function getTotalPassengers(data) {
 	return 0
 }
 
 // 2 ---------------------------------------------------------------
-// Return the number of surviving passengers
+// Return the number of surviving passengers. A passenger survived 
+// if their survived property is "Yes".
+// Return a number.
 
 function getSurvivorCount(data) {
 	return 0
 }
 
 // 3 ---------------------------------------------------------------
-// Return the number of passengers who did not survive
+// Return the number of passengers who did not survive. A passenger
+// Return a number.
 
 function getCasualityCount(data) {
 	return 0
@@ -40,8 +44,9 @@ function getCasualityCount(data) {
 
 // 4 ---------------------------------------------------------------
 // Return the number of passengers in any class. This function 
-// takes the data and the passenger class and returns the number
-// of passengers in that class. 
+// takes the data and the passenger class a string. Fins all of the 
+// passengers whose pclass matches and return the count. 
+// Return a number
 
 function countPassengersInClass(data, pclass) {
 	return 0
@@ -49,8 +54,7 @@ function countPassengersInClass(data, pclass) {
 
 // 5 ---------------------------------------------------------------
 // Return the number of survivors in a class. This function takes 
-// the data and passenger class and returns the number of 
-// passengers in that class who survived. 
+// the data and passenger class. Return only passengers  
 
 function getSurvivorCountForClass(data, pclass) {
 	return 0
