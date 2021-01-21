@@ -130,55 +130,21 @@ function getCasualitiesByGender(data, gender) {
 	return 0
 }
 
-// 15 ---------------------------------------------------------------
-// Return the number of passengers who survived by passenger class.
-
-function getSurvivorsByPClass(data, pclass) {
-	return 0
-}
-
-// 16 ---------------------------------------------------------------
-// Return the number of passengers who survived by passenger class.
-
-function getCasualitiesByPClass(data, pclass) {
-	return 0
-}
-
-// 17 ---------------------------------------------------------------
-// Write a function that returns an array of unique values for any
-// property in the data. For example If we needed to find number 
-// of passenger classes from data this function should return:
-// [1,2,3]. If you wanted to find the number of embarkations the 
-// function should return: ['S', 'C', 'Q']
-
-function getUniqueValues(data, property) {
-	return 0
-}
-
-// 18 ---------------------------------------------------------------
-// Return all of the objects in the data where a given field is 
-// not undefined. If a field is undefined it means that field is 
-// missing from the data. 
-
-function getAllOfField(data, field) {
-	return 0
-}
-
-// 19 --------------------------------------------------------------
+// 15 --------------------------------------------------------------
 // Return the total of all fares paid. 
 
 function getTotalFare(data) {
 	return 0
 }
 
-// 20 --------------------------------------------------------------
+// 16 --------------------------------------------------------------
 // Return the average fare paid.
 
 function getAverageFare(data) {
 	return 0
 }
 
-// 21 --------------------------------------------------------------
+// 17 --------------------------------------------------------------
 // Return the median fare. The median is the value equal distance
 // from the minimum and maximum values. 
 
@@ -186,21 +152,21 @@ function getMedianFare(data) {
 	return 0
 }
 
-// 22 --------------------------------------------------------------
+// 18 --------------------------------------------------------------
 // Return the average age of all passengers. 
 
 function getAverageAge(data) {
 	return 0
 }
 
-// 23 --------------------------------------------------------------
+// 19 --------------------------------------------------------------
 // Return the median age from passengers. 
 
 function getMedianAge(data) {
 	return 0
 }
 
-// 24 --------------------------------------------------------------
+// 20 --------------------------------------------------------------
 // 
 
 function getAverageAgeByGender(data, gender) {
