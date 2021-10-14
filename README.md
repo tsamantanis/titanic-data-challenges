@@ -2,7 +2,7 @@
 
 ## Answering questions with Data
 
-The values in a dataset tell a story. Reading the story is the process of sorting, filtering, and looking at the data in different ways. 
+The values in a dataset tell a story. Reading the story is the process of sorting, filtering, and looking at the data in different ways.
 
 ## Learning Objectives
 
@@ -20,7 +20,7 @@ The values in a dataset tell a story. Reading the story is the process of sortin
 
 ## What will you turn in?
 
-Your job is to clone this repo and solve the challenges below. After solving the challenges below push your work to GitHub, then submit your work to [GradeScope](https://www.gradescope.com/courses/218919).  
+Your job is to clone this repo and solve the challenges below. After solving the challenges below push your work to GitHub, then submit your work to **GradeScope**.  
 
 ## Getting started
 
