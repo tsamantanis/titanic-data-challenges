@@ -21,7 +21,7 @@
 // Return the total number of passengers. 
 // Returns a number.
 
-function getTotalPassengers(data) {
+const getTotalPassengers = (data) => {
 	return 0
 }
 
@@ -30,7 +30,7 @@ function getTotalPassengers(data) {
 // if their survived property is "Yes".
 // Return a number.
 
-function getSurvivorCount(data) {
+const getSurvivorCount = (data) => {
 	return 0
 }
 
@@ -39,7 +39,7 @@ function getSurvivorCount(data) {
 // did not survive if their survived property is "No".
 // Return a number.
 
-function getCasualityCount(data) {
+const getCasualityCount = (data) => {
 	return 0
 }
 
@@ -49,7 +49,7 @@ function getCasualityCount(data) {
 // passengers whose pclass matches and return the count. 
 // Return a number
 
-function countPassengersInClass(data, pclass) {
+const countPassengersInClass = (data, pclass) => {
 	return 0
 }
 
@@ -58,7 +58,7 @@ function countPassengersInClass(data, pclass) {
 // the data and passenger class. 
 // Return the count of survivors in that pclass.
 
-function getSurvivorCountForClass(data, pclass) {
+const getSurvivorCountForClass = (data, pclass) => {
 	return 0
 }
 
@@ -67,7 +67,7 @@ function getSurvivorCountForClass(data, pclass) {
 // This function takes the data and the passenger class and returns 
 // the number of passengers who did not survive for that class. 
 
-function getCasualityCountForClass(data, pclass) {
+const getCasualityCountForClass = (data, pclass) => {
 	return 0
 }
 
@@ -75,7 +75,7 @@ function getCasualityCountForClass(data, pclass) {
 // Return the age of the youngest passenger. You'll need to filter
 // passenger data where the age is missing. 
 
-function getMinAge(data) {
+const getMinAge = (data) => {
 	return 0
 }
 
@@ -83,7 +83,7 @@ function getMinAge(data) {
 // Return the age of the oldest passenger. Filter passengers where 
 // age is missing.
 
-function getMaxAge(data) {
+const getMaxAge = (data) => {
 	return 0
 }
 
@@ -93,7 +93,7 @@ function getMaxAge(data) {
 // or Q. This function takes in the passenger data and the 
 // embarkation code. Return the count of passenegers with that code.
 
-function getEmbarkedCount(data, embarked) {
+const getEmbarkedCount = (data, embarked) => {
 	return 0
 }
 
@@ -101,7 +101,7 @@ function getEmbarkedCount(data, embarked) {
 // Return the lowest fair paid by any passenger. The fare is missing 
 // for some passengers you'll need to filter this out!
 
-function getMinFare(data) {
+const getMinFare = (data) => {
 	return -1
 }
 
@@ -109,7 +109,7 @@ function getMinFare(data) {
 // Return the highest fare paid by any passenger. Some of the 
 // passengers are missing data for fare. Be sure to filter these! 
 
-function getMaxFare(data) {
+const getMaxFare = (data) => {
 	return 0
 }
 
@@ -117,7 +117,7 @@ function getMaxFare(data) {
 // Return the count of passengers by gender. Each passenger object has
 // "sex" property that is either "male" or "female"
 
-function getPassengersByGender(data, gender) {
+const getPassengersByGender = (data, gender) => {
 	return 0
 }
 
@@ -126,14 +126,14 @@ function getPassengersByGender(data, gender) {
 // function receives parameters of data and gender. Match the gender
 // to the "sex" property and check the "survived" property. 
 
-function getSurvivorsByGender(data, gender) {
+const getSurvivorsByGender = (data, gender) => {
 	return 0
 }
 
 // 14 ---------------------------------------------------------------
 // Return the number of passengers who did not survived by gender. 
 
-function getCasualitiesByGender(data, gender) {
+const getCasualitiesByGender = (data, gender) => {
 	return 0
 }
 
@@ -142,7 +142,7 @@ function getCasualitiesByGender(data, gender) {
 // return that number. Be sure to filter the passengers records 
 // where the fare is missing! 
 
-function getTotalFare(data) {
+const getTotalFare = (data) => {
 	return 0
 }
 
@@ -151,7 +151,7 @@ function getTotalFare(data) {
 // by the number of passengers. Be sure to filter passengers who are
 // missing a fare! 
 
-function getAverageFare(data) {
+const getAverageFare = (data) => {
 	return 0
 }
 
@@ -163,7 +163,7 @@ function getAverageFare(data) {
 // is even average the two middle values. For example: [2,4,5,16]
 // 4 + 5 = 9 / 2 median is 4.5!
 
-function getMedianFare(data) {
+const getMedianFare = (data) => {
 	return 0
 }
 
@@ -172,7 +172,7 @@ function getMedianFare(data) {
 // by the number of passenegers. Be sure to filter where ages are not 
 // available. 
 
-function getAverageAge(data) {
+const getAverageAge = (data) => {
 	return 0
 }
 
@@ -180,7 +180,7 @@ function getAverageAge(data) {
 // Return the median age from passengers. Do that median thing of 
 // finding the middle value. 
 
-function getMedianAge(data) {
+const getMedianAge = (data) => {
 	return 0
 }
 
@@ -188,7 +188,7 @@ function getMedianAge(data) {
 // Add up all of the ages for the gender provided and divide by the 
 // the total number. 
 
-function getAverageAgeByGender(data, gender) {
+const getAverageAgeByGender = (data, gender) => {
 	return 0
 }
 

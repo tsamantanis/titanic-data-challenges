@@ -23,8 +23,48 @@ beforeAll((done) => {
 	})
 })
 
+// ----------------------------------------------------------------------
 
-describe.skip('Challenge 2 Titanic', () => {
+// When you are ready to start on challenge 2 remove the word skip from 
+// the line below: describe.skip() -> describe()
+
+describe('Challenge 2 Titanic', () => {
+
+	// Beucause these tests return long arrays of data it was 
+	// impractical to hard code all these arrays here so the 
+	// below generates the lists from the data! The code below 
+	// are the answers to the questions. Don't peak unless you 
+	// are really stuck on a problem. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	test('Test getAll', () => {
 		const allFares = data.map(p => p.fields.fare)

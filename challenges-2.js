@@ -24,7 +24,7 @@
 // all fares something like: [7.3125, 15.75, 7.775, 10.5, ...]
 // Or if property = 'age' -> [40, 26, 22, 28, 23, 45, 21, ...]
 
-function getAllValuesForProperty(data, property) {
+const getAllValuesForProperty = (data, property) => {
 	return []
 }
 
@@ -33,7 +33,7 @@ function getAllValuesForProperty(data, property) {
 // For example property = 'sex' and value = 'male' returns an 
 // array of all the male passengers [{...}, {...}, {...}, ...]
 
-function filterByProperty(data, property, value) {
+const filterByProperty = (data, property, value) => {
 	return []
 }
 
@@ -42,7 +42,7 @@ function filterByProperty(data, property, value) {
 // Return an array where the objects that have undefined for a 
 // given property have been removed
 
-function filterNullForProperty(data, property) {
+const filterNullForProperty = (data, property) => {
 	return []
 }
 
@@ -51,7 +51,7 @@ function filterNullForProperty(data, property) {
 // for any (numeric) property
 // Return the total of all values for a given property. This
 
-function sumAllProperty(data, property) {
+const sumAllProperty = (data, property) => {
 	return 0
 }
 
@@ -66,7 +66,7 @@ function sumAllProperty(data, property) {
 // That is 644 passengers embarked at South Hampton. 168 embarked 
 // at Cherbourg, 77 emabrked at Queenstown, and 2 are undedfined
 
-function countAllProperty(data, property) {
+const countAllProperty = (data, property) => {
 	return {}
 }
 
@@ -76,7 +76,7 @@ function countAllProperty(data, property) {
 // of a properties divided into buckets and counting the number
 // of items in each bucket.
 
-function makeHistogram(data, property, step) {
+const makeHistogram = (data, property, step) => {
 	return []
 }
 
@@ -85,7 +85,7 @@ function makeHistogram(data, property, step) {
 // array of normalized values. To normalize the values you need
 // to divide each value by the maximum value in the array.
 
-function normalizeProperty(data, property) {
+const normalizeProperty = (data, property) => {
 	return []
 }
 
@@ -96,7 +96,7 @@ function normalizeProperty(data, property) {
 // For example if the property string were "sex" this function 
 // would return ['male', 'female']
 
-function getUniqueValues(data, property) {
+const getUniqueValues = (data, property) => {
 	return []
 }
 
