@@ -89,12 +89,26 @@ function normalizeProperty(data, property) {
 	return []
 }
 
+// 8 ------------------------------------------------------------
+// Write a function that gets all unique values for a property. 
+// Given the array of data and a property string it should return
+// an array of all of the unique values under that property. 
+// For example if the property string were "sex" this function 
+// would return ['male', 'female']
+
+function getUniqueValues(data, property) {
+	return []
+}
+
 // --------------------------------------------------------------
 // --------------------------------------------------------------
-module.exports.getAllValuesForProperty = getAllValuesForProperty
-module.exports.filterByProperty = filterByProperty
-module.exports.filterNullForProperty = filterNullForProperty
-module.exports.sumAllProperty = sumAllProperty
-module.exports.countAllProperty = countAllProperty
-module.exports.makeHistogram = makeHistogram
-module.exports.normalizeProperty = normalizeProperty
+module.exports = {
+	getAllValuesForProperty,
+	filterByProperty,
+	filterNullForProperty,
+	sumAllProperty,
+	countAllProperty,
+	makeHistogram,
+	normalizeProperty,
+	getUniqueValues
+}

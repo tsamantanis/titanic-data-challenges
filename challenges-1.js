@@ -19,7 +19,7 @@
 
 // 1 ---------------------------------------------------------------
 // Return the total number of passengers. 
-// Return a number.
+// Returns a number.
 
 function getTotalPassengers(data) {
 	return 0
@@ -36,6 +36,7 @@ function getSurvivorCount(data) {
 
 // 3 ---------------------------------------------------------------
 // Return the number of passengers who did not survive. A passenger
+// did not survive if their survived property is "No".
 // Return a number.
 
 function getCasualityCount(data) {
@@ -44,7 +45,7 @@ function getCasualityCount(data) {
 
 // 4 ---------------------------------------------------------------
 // Return the number of passengers in any class. This function 
-// takes the data and the passenger class a string. Fins all of the 
+// takes the data and the passenger class a string. Find all of the 
 // passengers whose pclass matches and return the count. 
 // Return a number
 
@@ -54,7 +55,8 @@ function countPassengersInClass(data, pclass) {
 
 // 5 ---------------------------------------------------------------
 // Return the number of survivors in a class. This function takes 
-// the data and passenger class. Return only passengers  
+// the data and passenger class. 
+// Return the count of survivors in that pclass.
 
 function getSurvivorCountForClass(data, pclass) {
 	return 0
@@ -78,7 +80,8 @@ function getMinAge(data) {
 }
 
 // 8 ---------------------------------------------------------------
-// Return the age of the oldest passenger. 
+// Return the age of the oldest passenger. Filter passengers where 
+// age is missing.
 
 function getMaxAge(data) {
 	return 0
@@ -87,7 +90,8 @@ function getMaxAge(data) {
 // 9 ---------------------------------------------------------------
 // Return the number of passengers that embarked at a given stop. 
 // Each passenger has a embarked property with a value of: S, C,
-// or Q. 
+// or Q. This function takes in the passenger data and the 
+// embarkation code. Return the count of passenegers with that code.
 
 function getEmbarkedCount(data, embarked) {
 	return 0
@@ -95,29 +99,32 @@ function getEmbarkedCount(data, embarked) {
 
 // 10 ---------------------------------------------------------------
 // Return the lowest fair paid by any passenger. The fare is missing 
-// for some passengers you'll need to filter this out! 
+// for some passengers you'll need to filter this out!
 
 function getMinFare(data) {
-	return 0
+	return -1
 }
 
 // 11 ---------------------------------------------------------------
 // Return the highest fare paid by any passenger. Some of the 
-// passengers are missing data for fare.
+// passengers are missing data for fare. Be sure to filter these! 
 
 function getMaxFare(data) {
 	return 0
 }
 
 // 12 ---------------------------------------------------------------
-// Return the count of passengers by gender. 
+// Return the count of passengers by gender. Each passenger object has
+// "sex" property that is either "male" or "female"
 
 function getPassengersByGender(data, gender) {
 	return 0
 }
 
 // 13 ---------------------------------------------------------------
-// Return the number of passengers who survived by gender. 
+// Return the number of passengers who survived by gender. This 
+// function receives parameters of data and gender. Match the gender
+// to the "sex" property and check the "survived" property. 
 
 function getSurvivorsByGender(data, gender) {
 	return 0
@@ -131,14 +138,18 @@ function getCasualitiesByGender(data, gender) {
 }
 
 // 15 --------------------------------------------------------------
-// Return the total of all fares paid. 
+// Return the total of all fares paid. Add up all of the fares and 
+// return that number. Be sure to filter the passengers records 
+// where the fare is missing! 
 
 function getTotalFare(data) {
 	return 0
 }
 
 // 16 --------------------------------------------------------------
-// Return the average fare paid.
+// Return the average fare paid. Add up all of the fares and divide 
+// by the number of passengers. Be sure to filter passengers who are
+// missing a fare! 
 
 function getAverageFare(data) {
 	return 0
@@ -146,28 +157,36 @@ function getAverageFare(data) {
 
 // 17 --------------------------------------------------------------
 // Return the median fare. The median is the value equal distance
-// from the minimum and maximum values. 
+// from the minimum and maximum values. Filter passengers who are 
+// missing fares. Sort the passengers on the fare pick the one in
+// the middle: [11,33,77] <- 33 is the median. If number of items 
+// is even average the two middle values. For example: [2,4,5,16]
+// 4 + 5 = 9 / 2 median is 4.5!
 
 function getMedianFare(data) {
 	return 0
 }
 
 // 18 --------------------------------------------------------------
-// Return the average age of all passengers. 
+// Return the average age of all passengers. Add all ages and divide 
+// by the number of passenegers. Be sure to filter where ages are not 
+// available. 
 
 function getAverageAge(data) {
 	return 0
 }
 
 // 19 --------------------------------------------------------------
-// Return the median age from passengers. 
+// Return the median age from passengers. Do that median thing of 
+// finding the middle value. 
 
 function getMedianAge(data) {
 	return 0
 }
 
 // 20 --------------------------------------------------------------
-// 
+// Add up all of the ages for the gender provided and divide by the 
+// the total number. 
 
 function getAverageAgeByGender(data, gender) {
 	return 0
@@ -175,26 +194,25 @@ function getAverageAgeByGender(data, gender) {
 
 // --------------------------------------------------------------
 // --------------------------------------------------------------
-module.exports.getTotalPassengers = getTotalPassengers
-module.exports.getSurvivorCount = getSurvivorCount
-module.exports.getCasualityCount = getCasualityCount
-module.exports.getUniqueValues = getUniqueValues
-module.exports.countPassengersInClass = countPassengersInClass
-module.exports.getSurvivorCountForClass = getSurvivorCountForClass
-module.exports.getCasualityCountForClass = getCasualityCountForClass
-module.exports.getMinAge = getMinAge
-module.exports.getMaxAge = getMaxAge
-module.exports.getEmbarkedCount = getEmbarkedCount
-module.exports.getMaxFare = getMaxFare
-module.exports.getMinFare = getMinFare
-module.exports.getPassengersByGender = getPassengersByGender
-module.exports.getSurvivorsByGender = getSurvivorsByGender
-module.exports.getCasualitiesByGender = getCasualitiesByGender
-module.exports.getSurvivorsByPClass = getSurvivorsByPClass
-module.exports.getCasualitiesByPClass = getCasualitiesByPClass
-module.exports.getTotalFare = getTotalFare
-module.exports.getAverageFare = getAverageFare
-module.exports.getMedianFare = getMedianFare
-module.exports.getAverageAge = getAverageAge
-module.exports.getMedianAge = getMedianAge
-module.exports.getAverageAgeByGender = getAverageAgeByGender
+module.exports = {
+	getTotalPassengers,
+	getSurvivorCount,
+	getCasualityCount,
+  countPassengersInClass,
+  getSurvivorCountForClass,
+	getCasualityCountForClass,
+	getMinAge,
+	getMaxAge,
+	getEmbarkedCount,
+	getMaxFare,
+	getMinFare,
+	getPassengersByGender,
+	getSurvivorsByGender,
+	getCasualitiesByGender,
+	getTotalFare,
+	getAverageFare,
+	getMedianFare,
+	getAverageAge,
+	getMedianAge,
+	getAverageAgeByGender
+}

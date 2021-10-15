@@ -142,4 +142,11 @@ describe.skip('Challenge 2 Titanic', () => {
 		expect(index.normalizeProperty(data, 'fare')).toEqual(normalizedFares)
 	})
 
+	test('Test getUniqueValues', () => {
+		expect(index.getUniqueValues(data, 'pclass').sort()).toEqual([3, 2, 1].sort())
+		expect(index.getUniqueValues(data, 'embarked').sort()).toEqual(['C', 'S', 'Q', undefined].sort())
+		expect(index.getUniqueValues(data, 'sex').sort()).toEqual(['male', 'female'].sort())
+		expect(index.getUniqueValues(data, 'survived').sort()).toEqual(['Yes', 'No'].sort())
+	})
+
 })
