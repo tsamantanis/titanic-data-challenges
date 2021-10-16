@@ -16,7 +16,7 @@ setTimeout(function() {
 // A Callback is a function you pass as a parameter to 
 // a function. These appear everywhere in javascript
 
-const numbers = [1,2,4,5,7,88,9,2,4,7,99,22,33,4,56,25]
+const primes = [1,2,3,5,7]
 
 // Using forEach() often you'll have a loop and want to 
 // iterate over each element in the loop.
@@ -26,7 +26,7 @@ const numbers = [1,2,4,5,7,88,9,2,4,7,99,22,33,4,56,25]
 // executes the callback once for each item in the array
 // passing one value from the array each iteration
 
-numbers.forEach((n) => {
+primes.forEach((n) => {
 	// This function is the callback
 	// n is a value from the numbers array
 	console.log(n)
@@ -52,57 +52,6 @@ numbers.forEach((n) => {
 // https://javascript.info/array-methods#iterate-foreach
 
 
-console.log('1 ------------------------------')
-// A regular function 
-function world() {
-  console.log('World')
-}
-
-world() // invoke this function
-
-
-console.log('2 ------------------------------')
-// An arrow function
-const hello = () => {
-  console.log('Hello')
-}
-
-hello()
-
-console.log('3 ------------------------------')
-// Parameters go in the ()
-const foo = (x, y) => {
-  console.log(x * y)
-}
-
-foo(4, 3)
-
-
-console.log('4 ------------------------------')
-// If the function is on a single line the 
-// {} can be omitted
-const bar = (x, y) => console.log(x / y)
-
-bar(3, 4)
-
-
-console.log('5 ------------------------------')
-// If there is only a single parameter the 
-// () can be omitted
-const func = x => x * 2 // Value is returned!
-
-console.log(func(3)) // -> 6
-
-
-console.log('6 ------------------------------')
-// If there are no parameters you need to inlcude
-// () or a _
-const pi = () => 3.14
-
-console.log(pi()) // -> 3.14
-
-
-
 // Callbacks - 
 // Arrow functions work best for Callbacks
 
@@ -111,7 +60,7 @@ console.log(pi()) // -> 3.14
 console.log('7 ------------------------------')
 // Set time out takes a callback it will 
 // execute in the future. 
-setTimeout(() => console.log('1 sec later (8)'), 1000)
+setTimeout(() => console.log('1 sec later'), 1000)
 
 // Notice the arrow function used here! 
 
