@@ -22,7 +22,7 @@
 // Returns a number.
 
 const getTotalPassengers = (data) => {
-	return 0
+	return data.length
 }
 
 // 2 ---------------------------------------------------------------
@@ -31,7 +31,7 @@ const getTotalPassengers = (data) => {
 // Return a number.
 
 const getSurvivorCount = (data) => {
-	return 0
+	return data.filter((item) => item.fields.survived === "Yes").length
 }
 
 // 3 ---------------------------------------------------------------
@@ -40,7 +40,7 @@ const getSurvivorCount = (data) => {
 // Return a number.
 
 const getCasualityCount = (data) => {
-	return 0
+	return data.filter((item) => item.fields.survived === "No").length
 }
 
 // 4 ---------------------------------------------------------------
@@ -50,7 +50,7 @@ const getCasualityCount = (data) => {
 // Return a number
 
 const countPassengersInClass = (data, pclass) => {
-	return 0
+	return data.filter(item => item.fields.pclass === pclass).length
 }
 
 // 5 ---------------------------------------------------------------
@@ -59,7 +59,7 @@ const countPassengersInClass = (data, pclass) => {
 // Return the count of survivors in that pclass.
 
 const getSurvivorCountForClass = (data, pclass) => {
-	return 0
+	return data.filter((item) => item.fields.pclass === pclass && item.fields.survived === "Yes").length
 }
 
 // 6 ---------------------------------------------------------------
@@ -68,7 +68,7 @@ const getSurvivorCountForClass = (data, pclass) => {
 // the number of passengers who did not survive for that class. 
 
 const getCasualityCountForClass = (data, pclass) => {
-	return 0
+	return data.filter((item) => item.fields.pclass === pclass && item.fields.survived === "No").length
 }
 
 // 7 ---------------------------------------------------------------
@@ -76,7 +76,7 @@ const getCasualityCountForClass = (data, pclass) => {
 // passenger data where the age is missing. 
 
 const getMinAge = (data) => {
-	return 0
+	return Math.min.apply(Math, data.filter(item => item.fields && item.fields.age).map((a) => a.fields.age))
 }
 
 // 8 ---------------------------------------------------------------
@@ -84,7 +84,7 @@ const getMinAge = (data) => {
 // age is missing.
 
 const getMaxAge = (data) => {
-	return 0
+	return Math.max.apply(Math, data.filter(item => item.fields && item.fields.age).map((a) => a.fields.age))
 }
 
 // 9 ---------------------------------------------------------------
@@ -94,7 +94,7 @@ const getMaxAge = (data) => {
 // embarkation code. Return the count of passenegers with that code.
 
 const getEmbarkedCount = (data, embarked) => {
-	return 0
+	return data.filter(item => item.fields.embarked === embarked).length
 }
 
 // 10 ---------------------------------------------------------------
@@ -102,7 +102,7 @@ const getEmbarkedCount = (data, embarked) => {
 // for some passengers you'll need to filter this out!
 
 const getMinFare = (data) => {
-	return -1
+	return Math.min.apply(Math, data.filter(item => item.fields && item.fields.fare !== null).map((a) => a.fields.fare))
 }
 
 // 11 ---------------------------------------------------------------
@@ -110,7 +110,7 @@ const getMinFare = (data) => {
 // passengers are missing data for fare. Be sure to filter these! 
 
 const getMaxFare = (data) => {
-	return 0
+	return Math.max.apply(Math, data.filter(item => item.fields && item.fields.fare).map((a) => a.fields.fare))
 }
 
 // 12 ---------------------------------------------------------------
@@ -118,7 +118,7 @@ const getMaxFare = (data) => {
 // "sex" property that is either "male" or "female"
 
 const getPassengersByGender = (data, gender) => {
-	return 0
+	return data.filter(item => item.fields.sex === gender).length
 }
 
 // 13 ---------------------------------------------------------------
@@ -127,14 +127,14 @@ const getPassengersByGender = (data, gender) => {
 // to the "sex" property and check the "survived" property. 
 
 const getSurvivorsByGender = (data, gender) => {
-	return 0
+	return data.filter((item) => item.fields.survived === "Yes" && item.fields.sex === gender).length
 }
 
 // 14 ---------------------------------------------------------------
 // Return the number of passengers who did not survived by gender. 
 
 const getCasualitiesByGender = (data, gender) => {
-	return 0
+	return data.filter((item) => item.fields.survived === "No" && item.fields.sex === gender).length
 }
 
 // 15 --------------------------------------------------------------
@@ -143,7 +143,7 @@ const getCasualitiesByGender = (data, gender) => {
 // where the fare is missing! 
 
 const getTotalFare = (data) => {
-	return 0
+	return data.filter(item => typeof item.fields.fare !== "undefined").map(item => item.fields.fare).reduce((a, b) => a + b)
 }
 
 // 16 --------------------------------------------------------------
@@ -152,7 +152,7 @@ const getTotalFare = (data) => {
 // missing a fare! 
 
 const getAverageFare = (data) => {
-	return 0
+	return getTotalFare(data) / getTotalPassengers(data)
 }
 
 // 17 --------------------------------------------------------------
@@ -164,7 +164,8 @@ const getAverageFare = (data) => {
 // 4 + 5 = 9 / 2 median is 4.5!
 
 const getMedianFare = (data) => {
-	return 0
+	const fare = data.filter(item => typeof item.fields.fare !== "undefined").map(item => item.fields.fare).sort((a, b) => a - b)
+	return fare.length % 2 === 0 ? (fare[Math.round(fare.length / 2)] + fare[(Math.round(fare.length / 2)) - 1]) / 2 : fare[Math.round(fare.length / 2) -1]
 }
 
 // 18 --------------------------------------------------------------
@@ -173,7 +174,8 @@ const getMedianFare = (data) => {
 // available. 
 
 const getAverageAge = (data) => {
-	return 0
+	const k = data.filter(item => item.fields && item.fields.age)
+	return k.map((a) => a.fields.age).reduce((a, b) => a + b) / k.length
 }
 
 // 19 --------------------------------------------------------------
@@ -181,7 +183,8 @@ const getAverageAge = (data) => {
 // finding the middle value. 
 
 const getMedianAge = (data) => {
-	return 0
+	const age = data.filter(item => item.fields && item.fields.age).map(item => item.fields.age).sort((a, b) => a - b)
+	return age.length % 2 === 0 ? (age[Math.round(age.length / 2)] + age[(Math.round(age.length / 2)) - 1]) / 2 : age[Math.round(age.length / 2) -1]
 }
 
 // 20 --------------------------------------------------------------
@@ -189,7 +192,8 @@ const getMedianAge = (data) => {
 // the total number. 
 
 const getAverageAgeByGender = (data, gender) => {
-	return 0
+	const k = data.filter(item => item.fields && item.fields.age && item.fields.sex === gender)
+	return k.map((a) => a.fields.age).reduce((a, b) => a + b) / k.length
 }
 
 // --------------------------------------------------------------
